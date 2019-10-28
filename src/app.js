@@ -10,6 +10,7 @@ const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
 const app = express();
+const port = process.env.PORT || 5000;
 
 // Setup view engine to handlebars and set views directory
 app.set('view engine', 'hbs');
@@ -94,6 +95,6 @@ app.get('/*', (req, res) => {
     });
 });
 
-app.listen(5000, () => {
-    console.log('Connected to port 5000');
+app.listen(port, () => {
+    console.log(`Connected to port ${port}`);
 });

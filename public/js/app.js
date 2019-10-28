@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit', (e) => {
     // const fetchResult = fetchFunction(search.value);
     // setTimeout(() => console.log(fetchResult), 3000);
     msg1.textContent = "Loading data";
-    fetch(`http://localhost:5000/weather?address=${search.value}`).then((response) => {
+    fetch(`/weather?address=${search.value}`).then((response) => {
     response.json().then((data) => {
         if(data.error) {
             console.log(data.error);
